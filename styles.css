@@ -194,7 +194,7 @@ header nav ul li a:hover {
 
 .producto-imagen img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
@@ -465,6 +465,7 @@ footer .social a {
 }
 .producto img {
     width: 100%;
+    height: auto;
     transition: transform 0.5s ease;
 }
 
@@ -512,3 +513,116 @@ footer .social a {
 .cta-sticky:hover {
     transform: scale(1.1);
 }
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Reducir la altura del hero en móvil */
+        background-position: center; /* Asegurar que la imagen se vea correctamente */
+        padding: 20px; /* Añadir más espacio si es necesario */
+    }
+
+    .productos {
+        grid-template-columns: 1fr; /* Mostrar los productos en una sola columna */
+    }
+
+    .cta-sticky {
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Espacio entre ítems del menú en móvil */
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas y móviles */
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+}
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .btn-comprar {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Desactivar el parallax */
+        background-size: cover;
+    }
+}
+@media (max-width: 768px) {
+    .cta-sticky {
+        bottom: 15px;
+        right: 15px;
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3 {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+
+
+
